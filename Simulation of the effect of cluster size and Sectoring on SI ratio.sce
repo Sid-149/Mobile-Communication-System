@@ -1,0 +1,36 @@
+clc
+clear
+i = input("Enter the value of i:")
+j = input("Enter the value of j:")
+N = i^2 + i*j +j^2
+disp("Cluster Size:")
+disp(N)
+n = 4
+io = 6
+Q = sqrt(3*N)
+disp("Q:")
+disp(Q)
+SIR = ((Q)^n)/io
+disp("Signal to Interference Ratio:")
+disp(SIR)
+SIRdb = 10*log10(SIR)
+disp("Signal to Interference Ratio in dB:")
+disp(SIRdb)
+SI = (1/((2*(Q-1)^(-n))+(2*(Q+1)^(-n))+(2*(Q)^(-n))))
+SIdb = 10*log10(SI)
+disp("Signal to Interference Ratio for OmniDirection:")
+disp(SI)
+disp("Signal to Interference Ratio for OmniDirection in dB:")
+disp(SIdb)
+SIt = (1/(((Q+0.7)^(-n))+(Q^(-4))))
+SItdb = 10*log10(SIt)
+disp("Signal to Interference Ratio for 3 sectors:")
+disp(SIt)
+disp("Signal to Interference Ratio for 3 sectors in dB:")
+disp(SItdb)
+SIs = (1/(((Q+0.7)^(-n))))
+SIsdb = 10*log10(SIs)
+disp("Signal to Interference Ratio for 6 sectors:")
+disp(SIs)
+disp("Signal to Interference Ratio for 6 sectors in dB:")
+disp(SIsdb)
